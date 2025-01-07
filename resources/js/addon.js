@@ -1,7 +1,6 @@
 import AssetsFieldtype from "./components/fieldtypes/AssetsFieldtype.vue";
 import Editor from "./components/fieldtypes/Editor.vue";
 
-// Register components
 Statamic.booting(() => {
     Statamic.$components.register("assets-fieldtype", AssetsFieldtype);
 });
