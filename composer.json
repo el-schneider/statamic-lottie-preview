@@ -1,5 +1,8 @@
 {
     "name": "el-schneider/statamic-lottie-preview",
+    "license": "MIT",
+    "type": "statamic-addon",
+    "description": "Preview Lottie animations in your control panel",
     "autoload": {
         "psr-4": {
             "ElSchneider\\StatamicLottiePreview\\": "src"

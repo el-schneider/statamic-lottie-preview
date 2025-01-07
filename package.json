@@ -1,12 +1,5 @@
 {
-    "name": "statamic-lottie-preview",
-    "version": "0.0.1",
-    "description": "> Statamic Lottie Preview is a Statamic addon that does something pretty neat.",
-    "main": "index.js",
-    "type": "module",
-    "directories": {
-        "test": "tests"
-    },
+    "private": true,
     "scripts": {
         "dev": "vite",
         "build": "vite build"
@@ -24,8 +17,5 @@
         "@vitejs/plugin-vue2": "^2.3.3",
         "laravel-vite-plugin": "^1.0.2",
         "vite": "^6.0"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC"
+    }
 }

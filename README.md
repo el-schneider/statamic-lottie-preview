@@ -1,14 +1,12 @@
 # Statamic Lottie Preview
 
-> Statamic Lottie Preview is a Statamic addon that does something pretty neat.
+> A Statamic addon that previews Lottie animations in your control panel.
+
+![Screenshot](./screenshot.png)
 
 ## Features
 
-This addon does:
-
-- This
-- And this
-- And even this
+Support for `.lottie` and `.json` files
 
 ## How to Install
 
@@ -18,6 +16,7 @@ You can install this addon via Composer:
 composer require el-schneider/statamic-lottie-preview
 ```
 
-## How to Use
+## Roadmap
 
-Here's where you can explain how to use this wonderful addon.
+- [ ] Add assets browser support
+- [ ] Full playback controls for editor view
