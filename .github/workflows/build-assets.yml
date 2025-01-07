@@ -28,4 +28,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Build assets for distribution
-          file_pattern: "dist/*"
+          file_pattern: "resources/dist/*"
