@@ -3,10 +3,10 @@
 </template>
 
 <script>
-import { DotLottie } from "@lottiefiles/dotlottie-web";
+import { DotLottie } from '@lottiefiles/dotlottie-web'
 
 export default {
-    name: "LottiePreview",
+    name: 'LottiePreview',
 
     props: {
         src: {
@@ -27,17 +27,17 @@ export default {
         return {
             lottieInstance: null,
             isValidLottie: false,
-        };
+        }
     },
 
     mounted() {
-        this.initLottieAnimation();
+        this.initLottieAnimation()
     },
 
     beforeDestroy() {
         if (this.lottieInstance) {
-            this.lottieInstance.destroy();
-            this.lottieInstance = null;
+            this.lottieInstance.destroy()
+            this.lottieInstance = null
         }
     },
 
@@ -48,28 +48,28 @@ export default {
                 loop: this.loop,
                 canvas: this.$refs.lottieCanvas,
                 src: this.src,
-            });
+            })
 
             // Listen for load error event
-            this.lottieInstance.addEventListener("loadError", (event) => {
-                console.warn("Lottie load error:", event.error);
-                this.isValidLottie = false;
-                this.$emit("error", event.error);
+            this.lottieInstance.addEventListener('loadError', (event) => {
+                console.warn('Lottie load error:', event.error)
+                this.isValidLottie = false
+                this.$emit('error', event.error)
 
                 if (this.lottieInstance) {
-                    this.lottieInstance.destroy();
-                    this.lottieInstance = null;
+                    this.lottieInstance.destroy()
+                    this.lottieInstance = null
                 }
-            });
+            })
 
             // Listen for successful load
-            this.lottieInstance.addEventListener("load", () => {
-                this.isValidLottie = true;
-                this.$emit("loaded");
-            });
+            this.lottieInstance.addEventListener('load', () => {
+                this.isValidLottie = true
+                this.$emit('loaded')
+            })
 
-            this.lottieInstance.load();
+            this.lottieInstance.load()
         },
     },
-};
+}
 </script>

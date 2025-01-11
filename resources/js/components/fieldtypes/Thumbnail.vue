@@ -19,22 +19,19 @@
             @error="handleLottieError"
             class="asset-thumbnail w-8 h-8"
         />
-        <file-icon
-            v-else
-            :extension="asset.extension"
-            class="p-px asset-thumbnail rounded w-8 h-8"
-        />
+        <file-icon v-else :extension="asset.extension" class="p-px asset-thumbnail rounded w-8 h-8" />
     </div>
 </template>
 
 <script>
-import LottiePreview from "./LottiePreview.vue";
+import LottieAsset from './LottieAsset'
+import LottiePreview from './LottiePreview.vue'
 
 export default {
+    mixins: [LottieAsset],
     components: {
         LottiePreview,
     },
-
     props: {
         asset: Object,
         square: {
@@ -42,31 +39,10 @@ export default {
             type: Boolean,
         },
     },
-
-    data() {
-        return {
-            isLottieValid: true,
-        };
-    },
-
     computed: {
         showSvg() {
-            return this.asset.extension === "svg";
-        },
-
-        isLottieAnimation() {
-            if (!this.asset.extension) return false;
-            return (
-                this.asset.extension === "lottie" ||
-                this.asset.extension === "json"
-            );
+            return this.asset.extension === 'svg'
         },
     },
-
-    methods: {
-        handleLottieError() {
-            this.isLottieValid = false;
-        },
-    },
-};
+}
 </script>

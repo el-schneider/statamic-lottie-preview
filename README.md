@@ -18,5 +18,5 @@ composer require el-schneider/statamic-lottie-preview
 
 ## Roadmap
 
-- [ ] Add assets browser support
+- [x] Add assets browser support
 - [ ] Full playback controls for editor view

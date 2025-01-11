@@ -1,0 +1,3 @@
+resources/js/components/fieldtypes/AssetsFieldtype.vue
+resources/js/components/fieldtypes/Browser.vue
+resources/js/components/fieldtypes/Editor.vue
