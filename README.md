@@ -16,6 +16,16 @@ You can install this addon via Composer:
 composer require el-schneider/statamic-lottie-preview
 ```
 
+## Support for .lottie files
+
+you need to add `"lottie"` to the `additional_uploadable_extensions` array in your `config/statamic/assets.php` file, like so:
+
+```php
+'additional_uploadable_extensions' => [
+    'lottie',
+],
+```
+
 ## Roadmap
 
 - [x] Add assets browser support
